@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Comfortaa', cursive bold;
+}
+
+.navbar {
+    padding-top: 2em;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16.55556px;
+}
+
+.pt-7 {
+    padding-top: 90px;
+}
+
+
+/* 
+=================================
+=================================
+================================= */
+
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #303030;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+
+
+/* 
+=================================
+=================================
+================================= */
+
+
+
+
+
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 38px;
+    color: aliceblue;
+    transition: .4s;
+    padding-bottom: 5px;
+    padding-top: 0;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.2);
+}
+
+.nav-link {
+    margin-top: auto;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.dropdown-menu {
+    transition: .4s;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    transition: .4s;
+    font-size: 25px;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: aliceblue;
+}
+
+.reg {
+    margin-left: 45%;
+}
+
+.btn-login {
+    font-weight: 900;
+    color: aliceblue;
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.btn-reg {
+    margin-top: auto;
+    background: rgb(255, 255, 255);
+    color: rgb(252, 99, 79);
+    font-weight: 900;
+    border-radius: 40px;
+    padding: 5px 1em 7.5px;
+    transition: .4s;
+}
+
+.btn-login:hover {
+    transform: scale(1.2);
+    color: aliceblue;
+}
+
+.btn-reg:hover {
+    background: rgb(255, 147, 147);
+    transform: scale(1.2);
+    color: aliceblue;
+}
+
+.hello-block {
+    color: aliceblue;
+    background: url(/assets/images/bg-pattern-intro-desktop.svg) center no-repeat rgba(255, 123, 106, 0.9);
+    height: 85vh;
+}
+
+.row-first {
+    padding-top: 7.5%;
+    text-align: center;
+}
+
+.main-text-ps {
+    margin-top: 3.9%;
+}
+
+.btns-start {
+    margin-top: 5%;
+}
+
+.btn-start {
+    font-weight: 900;
+    margin-right: 20px;
+    transition: .4s;
+    border-radius: 40px;
+    background: rgb(255, 255, 255);
+    color: rgb(252, 99, 79);
+    padding: 5px 1em 7.5px;
+    font-size: 20px;
+}
+
+.btn-learn {
+    font-size: 20px;
+    padding: 5px 1em 7.5px;
+    font-weight: 900;
+    transition: .4s;
+    border-radius: 40px;
+    border: #fff solid 4px;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 991px) {
+    nav {
+        margin-top: 0;
+    }
+
+    .reg {
+        margin-left: 0;
+    }
+
+    .hello-block {
+        height: 95vh;
+    }
+}
+
+
+.img-disign {
+    background: url(../images/illustration-editor-desktop.svg) left no-repeat;
+    position: absolute;
+    right: 0;
+    width: 625px;
+    height: 882px;
+}
+
+@media screen and (max-width: 900px) {
+    .img-disign {
+        background: url(../images/illustration-editor-mobile.svg) left no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 841px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .img-disign {
+        height: 441px;
+        margin-left: 0%;
+
+    }
+}
+
+.text-info {
+    margin-top: 30%;
+}
+
+.text-info h6,
+.text-info h6 {
+    color: rgb(0, 2, 15);
+    margin-top: 7%;
+}
+
+.img-c {
+    background: url(../images/illustration-laptop-desktop.svg) right no-repeat;
+    position: absolute;
+    left: -350px;
+    width: 974px;
+    height: 786px;
+}
+
+@media screen and (max-width: 900px) {
+    .img-c {
+        background: url(../images/illustration-laptop-mobile.svg) right no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 841px;
+        position: relative;
+        margin-left: auto;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .img-c {
+        height: 441px;
+        margin-left: 0%;
+    }
+}
+
+.js-end {
+    justify-content: end;
+}
+
+@media screen and (max-width: 810px) {
+    .js-end {
+        justify-content: center;
+    }
+}
+
+.js-start {
+    justify-content: start;
+}
+
+@media screen and (max-width: 810px) {
+    .js-start {
+        justify-content: center;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 2em;
+    color: aliceblue;
+    margin-top: 18em;
+    background-color: rgb(32, 32, 32);
+}
+
+.footer a {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
