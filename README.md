@@ -6,4 +6,4 @@ Languages that were used are HTML, CSS/SCSS and JS. Site also is made using boot
 
 Anyone can use my code for their needs. I will fix bugs in the future (if I find them)
 
-Demo - 
+Demo - https://sprightly-peony-0ee4cc.netlify.app/
